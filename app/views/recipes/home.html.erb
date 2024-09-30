@@ -3,14 +3,14 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Description</th>
+      <th>Ingredients</th>
     </tr>
   </thead>
   <tbody>
     <% @recipes.each do |r| %>
       <tr>
         <td><%= r.title %></td>
-        <td><%= r.ingredients %></td>
+        <td><%= render r.ingredients %></td>
       </tr>
     <% end %>
   </tbody>
