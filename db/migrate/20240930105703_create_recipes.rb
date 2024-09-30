@@ -4,7 +4,6 @@ class CreateRecipes < ActiveRecord::Migration[7.1]
       t.string :title, null: false
       t.integer :cook_time
       t.integer :prep_time
-      t.text :ingredients
       t.integer :rating
       t.string :image
 
