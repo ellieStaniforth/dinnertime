@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
   root 'recipes#index'
 
-  resources :recipes
+  resources :recipes, only: :index do
+    get :random, on: :collection
+  end
 
   # Defines the root path route ("/")
   # root "posts#index"

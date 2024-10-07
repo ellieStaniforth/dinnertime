@@ -1,16 +1,16 @@
 class RecipesController < ApplicationController
 
   def index
-    if params[:search]
-      @recipes = Recipe.search(params[:search])
+    if params[:search].present?
+      @recipes = Recipe.search_by_ingredients(params[:search]).page(params[:page])
     else 
-      @recipes = Recipe.all
+      @recipes = Recipe.all.page(params[:page])
     end
   end
 
-  private 
+  def random
+    @recipes = Recipe.order("random()").page(0)
 
-  def recipe_params
-    params.require(:recipe).permit(:search)
+    render :index
   end
 end
