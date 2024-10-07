@@ -7,7 +7,7 @@ Recipe.delete_all
 
 JSON.parse(text_from_file).each do |object|
   next if Recipe.find_by(title: object['title']).present?
-  r = Recipe.create!(title: object['title'], cook_time: object['cook_time'], prep_time: object['prep_time'], rating: object['rating'], ingredients: object['ingredients'].join(' '))
+  r = Recipe.create!(title: object['title'], cook_time: object['cook_time'], prep_time: object['prep_time'], rating: object['rating'], ingredients: object['ingredients'].join(', '))
 
   puts r.title
 end
