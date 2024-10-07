@@ -1,14 +1,39 @@
-<h1>All Recipes</h1>
+<head>
+  <style>
+  html {
+    font-family: sans-serif;
+  }
+
+  table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+  }
+
+  td, th {
+    border: 1px solid rgb(190,190,190);
+    padding: 20px 20px;
+    border-color: pink;
+  }
+  td {
+    text-align: center;
+  }
+  </style>
+</head>
+
+<body>
+  <h1>Recipes with your ingredients: <%=@recipes.count %></h1>
   <h4>Search by Ingredients:</h4>
   <%= form_tag(recipes_path, method: :get) do %>
     <%= text_field_tag(:search, params[:search]) %>
     <%= submit_tag ("Search") %>
   <% end %>
 
-<table>
+  <table>
   <thead>
     <tr>
-      <th>Title</th>
+      <th>Recipe Title</th>
       <th>Ingredients</th>
     </tr>
   </thead>
@@ -21,4 +46,5 @@
     <% end %>
   </tbody>
 </table>
-
+</body>
+</html>
