@@ -1,6 +1,6 @@
 # README
 
-It's [dinner time](https://dinnertime-red-grass-2479.fly.dev/) ! This application helps users find the most relevant recipes that they can prepare with the ingredients that they have at home. Created as part of a job interview at PENNYLANE 😎
+It's [dinner time](https://dinnertime-red-grass-2479.fly.dev/) ! This application helps users find the most relevant recipes that they can prepare with the ingredients that they have at home.
 
 
 # USER STORIES
